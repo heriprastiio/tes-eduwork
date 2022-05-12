@@ -1,13 +1,10 @@
 <?php
-function fungsiBilEmpat($int)
+function fungsiOperasi($int)
 {
-    $operasi = $int * 3 * 2 * 1;
-    echo "Hasil $operasi";
+    if ($int == 1) {
+        return 1;
+    } else {
+        return $int * fungsiOperasi($int - 1);
+    }
 }
-function fungsiBilDelapan($int)
-{
-    $operasi = $int * 7 * 6 * 5 * 4 * 3 * 2 * 1;
-    echo "Hasil $operasi";
-}
-fungsiBilEmpat(4);
-fungsiBilDelapan(8);
+echo (fungsiOperasi(8));
